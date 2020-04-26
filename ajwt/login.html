@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>login</title>
+<script language=javascript>
+function vali()
+{
+var r1=new RegExp("^[a-z][a-z][a-z][a-z][a-z]+$");
+var r2=new RegExp("^\\w\\w\\w\\w\\w\\w+$");
+var name=window.document.log.name.value;
+var pass=window.document.log.password.value;
+var flag1=r1.test(name);
+var flag2=r2.test(pass);
+if(flag1==false)
+{
+alert("Invalid Name");
+return false;
+}
+else
+if(flag2==false)
+{
+alert("Invalid Password");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<form name=log><center><table border=1>
+<tr><td><h3><strong>
+Name:</strong></h3></td>
+<td><input type="text" name=name size=15></td>
+<tr><td><h3><strong>Password:</strong></h3></td>
+<td><input type=password name=password size=15></td></tr>
+<tr><td><input type="submit" value=enter onclick=vali()></td>
+<td><input type="reset" value=clear></td>
+</table>
+</center>
+</form>
+</body>
+</html>
